@@ -48,3 +48,38 @@ body{
     color:#000000;
     margin-top: 15px;
 }
+
+.textbox[type=password] {
+    text-align: center;
+    font-size: 16pt;
+    width: 270px;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 15px;
+}
+
+.buton {
+    background-color: #1D92DB;
+    margin-top: 15px;
+    padding: 12px;
+    display: block;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20pt;
+}
+    .buton:hover{
+        background-color:#1A628F;
+    }
+
+.link{
+    text-decoration:none;
+    color:#DB3433;
+    font-size: 15pt;
+    margin-top: 60px;
+}
+
+    .link:hover {
+        text-decoration: blink;
+        color: #8F1313;
+    }
