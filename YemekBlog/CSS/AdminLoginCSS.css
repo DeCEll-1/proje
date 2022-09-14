@@ -3,8 +3,9 @@
     padding:0;
 }
 
-body{
+body {
     background-color: #1D92DB;
+    background-image: url('../images/starscape.jpg');
 }
 
 .Tasiyici{

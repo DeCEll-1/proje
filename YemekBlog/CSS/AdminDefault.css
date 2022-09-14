@@ -1,0 +1,145 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+.header {
+    min-height: 80px;
+    background-color: #DBD948;
+    width: 100%;
+}
+
+    .header img {
+        float: left;
+        width: 15%;
+        height: 80px;
+    }
+
+    .header h1 {
+        margin-left: 50px;
+        float: left;
+        margin-top: 20px;
+        color: #8F1313;
+    }
+
+    .header h3 {
+        float: left;
+        margin-top: 30px;
+        color: #8F1313;
+    }
+
+.info {
+    float: right;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+    .info label {
+        text-decoration: none;
+        color: #DBD948;
+        font-weight: 900;
+    }
+
+    .info a {
+        font-size: 14pt;
+        color: #1D92DB;
+        text-decoration: none;
+    }
+
+        .info a:hover {
+            padding: 10px 0px;
+            color: #1A628F;
+        }
+
+.menubar {
+    min-height: 41px;
+    width: 100%;
+    background-color: #DBD948;
+}
+
+    .menubar ul {
+        list-style-type: none;
+    }
+
+    .menubar a{
+        text-decoration: none;
+    }
+
+    .menubar a:hover .menuitem0 {
+        background-color: #DB3433;
+        color:#1D92DB;
+        border-bottom: 5px solid #1A628F;
+    }
+
+    .menubar a:hover .menuitem1 {
+        background-color: #DB3433;
+        color: #1D92DB;
+        border-bottom: 5px solid #1A628F;
+    }
+
+.menuitem0{
+    color: #1A628F;
+    font-weight:300;
+    padding: 10px;
+    float:left;
+}
+
+.menuitem1 {
+    margin-left:100px;
+    color: #1A628F;
+    font-weight: 300;
+    padding: 10px;
+    float: left;
+}
+
+.content {
+    background-image: url('../images/barış abi.jpg');
+    width: 100%;
+    min-height: 600px;
+    padding-top:10px;
+}
+
+.table {
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    border: 2px ridge #DBD948;
+    background-color: #1D92DB;
+    border-radius: 11px;
+    opacity:0.2;
+}
+
+    .table:hover{
+        opacity:0.6;
+        background-color:#1A628F;
+    }
+
+.yarimtable {
+    width:400px;
+    border: 2px ridge #1A628F;
+    background-color:#1D92DB;
+    border-radius:11px;
+    opacity:0,2;
+}
+
+    .yarimtable:hover {
+        border: 2px ridge #1D92DB;
+        background-color: #1A628F;
+        opacity:0.4;
+    }
+
+    .table th{
+        text-align:center;
+        border-bottom: 2px solid #1A628F;
+        padding: 8px;
+    }
+
+    .table tr td {
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px ridge silver;
+    }
+
