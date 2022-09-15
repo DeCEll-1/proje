@@ -16,63 +16,67 @@ namespace DataAccessLayer
         IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrLocal);
         //tamam
         #region Validasyonlar
-        public string EpostaValidasyon(string Eposta)
+        public bool ValidEposta(string eposta)
         {
-            string validEposta = "";
             int sayac = 0;
-            try
+            string trueeposta = "";
+            foreach (char item in eposta)
             {
-                foreach (char item in Eposta)
+                if (item != '@' && item != '.' && item != ' ')
                 {
-                    bool s = true;
-                    if (!s)
-                    {
-                        break;
-                    }
-                    for (int i = 0; i < Eposta.Length; i++)
-                    {
-                        if (item != ' ' && item != '@' && item != '.')
-                        {
-                            validEposta += item;
-                            break;
-                        }
-                        else if (item == '@' && sayac == 0)
-                        {
-                            sayac += 1;
-                            validEposta += item;
-                            break;
-                        }
-                        else if (item == '.')
-                        {
-                            validEposta += ".com";
-                            break;
-                        }
-                    }
+                    trueeposta += item;
                 }
-
-                return validEposta;
-
+                else if (item == '@' && sayac == 0)
+                {
+                    sayac = 1;
+                    trueeposta += item;
+                }
+                else if (item == '.')
+                {
+                    trueeposta += ".com";
+                }
             }
-            catch (Exception)
+            sayac = 0;
+            foreach (char item in trueeposta)
             {
-
-                return null;
+                if (item == '@')
+                {
+                    sayac++;
+                }
+                else if (item == '.')
+                {
+                    sayac++;
+                }
             }
-
-
-
+            if (sayac == 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        public string NullVeBoslukKontrol(string text)
+        /// <summary>
+        /// boşsa true gönderir
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public bool NullVeBoslukKontrol(string text)
         {
-            string securedtxt = "";
+            bool a = true;
+            if (text == "")
+            {
+                return false;
+            }
             foreach (char item in text)
             {
-                if (item != ' ')
+                if (item == ' ')
                 {
-                    securedtxt += item;
+                    a = false;
                 }
             }
-            return securedtxt;
+            return a;
         }
         public bool UniqueEposta(string Eposta)
         {

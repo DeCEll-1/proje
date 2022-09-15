@@ -120,3 +120,7 @@ C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\obj\Debug\YemekBlog.csproj.Cor
 C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\obj\Debug\YemekBlog.csproj.CopyComplete
 C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\obj\Debug\YemekBlog.dll
 C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\obj\Debug\YemekBlog.pdb
+C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\bin\DataAccessLayer.dll
+C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\bin\DocumentFormat.OpenXml.dll
+C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\bin\DataAccessLayer.pdb
+C:\Users\toshiba\Documents\GitHub\proje\YemekBlog\bin\DocumentFormat.OpenXml.xml

@@ -1,2 +1,11 @@
 C:\Users\toshiba\source\repos\YemekBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
 C:\Users\toshiba\source\repos\YemekBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\bin\Debug\Dapper.dll
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\bin\Debug\Dapper.xml
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\toshiba\Documents\GitHub\proje\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
