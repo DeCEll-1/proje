@@ -14,7 +14,7 @@ namespace YemekBlog.Admin
     public partial class YoneticiGiris : System.Web.UI.Page
     {
         DataModel dm = new DataModel();
-        protected void Page_Load(object sender, EventArgs e) { }
+        protected void Page_Load(object sender, EventArgs e) { tb_KullaniciAdi.Text = ""; }
 
         protected void lbtn_Giris_Click(object sender, EventArgs e)
         {
@@ -30,20 +30,20 @@ namespace YemekBlog.Admin
                     }
                     else
                     {
-                        pnl_Hata.Visible = true;
-                        lbl_Hata.GroupingText = "E-posta veya Şifre Hatalı";
+                        pnl_mesaj.Visible = true;
+                        lbl_Hata.Text = "E-posta veya Şifre Hatalı";
                     }
                 }
                 else
                 {
-                    pnl_Hata.Visible = true;
-                    lbl_Hata.GroupingText = "E-Posta @ ve .com ifadelerini içermelidir";
+                    pnl_mesaj.Visible = true;
+                    lbl_Hata.Text = "E-Posta @ ve .com ifadelerini içermelidir";
                 }
             }
             else
             {
-                pnl_Hata.Visible = true;
-                lbl_Hata.GroupingText = "E-Posta veya Şifre Boş Bırakılamaz";
+                pnl_mesaj.Visible = true;
+                lbl_Hata.Text = "E-Posta veya Şifre Boş Bırakılamaz";
             }
         }
     }

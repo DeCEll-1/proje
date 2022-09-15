@@ -13,8 +13,8 @@
             <div class="panel">   
                 <img src="../Images/barış%20abi.jpg" />
                 <h3>Giriş</h3>
-                <asp:Panel ID="pnl_Hata" runat="server" Visible="false" CssClass="hata">
-                    <asp:Panel ID="lbl_Hata" runat="server"></asp:Panel>
+                <asp:Panel ID="pnl_mesaj" runat="server"  Visible="false">
+                    <asp:Label ID="lbl_Hata" Text="" runat="server" />
                 </asp:Panel>
                 <div>
                     <asp:TextBox ID="tb_KullaniciAdi" runat="server" CssClass="textbox" PlaceHolder="E-posta adresi" />
