@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal class Kullaniciler
+    public class Kullaniciler
     {
         public int ID { get; set; }
         public string KullaniciAdi { get; set; }

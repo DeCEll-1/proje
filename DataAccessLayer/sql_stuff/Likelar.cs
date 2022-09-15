@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.sql_stuff
 {
-    internal class Likelar
+    public class Likelar
     {
         public int ID { get; set; }
         public int YorumID { get; set; }

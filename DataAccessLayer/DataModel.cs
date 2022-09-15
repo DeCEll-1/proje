@@ -11,7 +11,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace DataAccessLayer
 {
-    internal class DataModel
+    public class DataModel
     {
         IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrLocal);
         //tamam
