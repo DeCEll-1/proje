@@ -71,14 +71,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminDefault.aspx" />
     <Content Include="Admin\YoneticiGiris.aspx" />
     <Content Include="CSS\AdminDefault.css" />
     <Content Include="CSS\AdminLoginCSS.css" />
-    <Content Include="Images\barış abi.jpg" />
+    <Content Include="Images\Exit.jpg" />
+    <Content Include="Images\Smile.png" />
+    <Content Include="Images\Baris Ozcan Polat Alemdar.jpg" />
+    <Content Include="Images\BarisAbi.jpg" />
     <Content Include="Images\Starscape.jpg" />
+    <Content Include="Images\TheRock.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminDefault.aspx.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDefault.aspx.designer.cs">
+      <DependentUpon>AdminDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Admin\YoneticiGiris.aspx.cs">
       <DependentUpon>YoneticiGiris.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -89,6 +108,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

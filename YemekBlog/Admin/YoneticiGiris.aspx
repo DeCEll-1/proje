@@ -11,10 +11,10 @@
     <form id="form1" runat="server">
         <div class="Tasiyici">
             <div class="panel">   
-                <img src="../Images/barış%20abi.jpg" />
+                <img src="../Images/BarisAbi.jpg" />
                 <h3>Giriş</h3>
                 <asp:Panel ID="pnl_mesaj" runat="server"  Visible="false">
-                    <asp:Label ID="lbl_Hata" Text="" runat="server" />
+                    <asp:Label ID="lbl_Hata" Text="" runat="server" CssClass="hata"></asp:Label>
                 </asp:Panel>
                 <div>
                     <asp:TextBox ID="tb_KullaniciAdi" runat="server" CssClass="textbox" PlaceHolder="E-posta adresi" />

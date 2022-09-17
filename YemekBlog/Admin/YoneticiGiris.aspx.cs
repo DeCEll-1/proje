@@ -14,10 +14,11 @@ namespace YemekBlog.Admin
     public partial class YoneticiGiris : System.Web.UI.Page
     {
         DataModel dm = new DataModel();
-        protected void Page_Load(object sender, EventArgs e) { tb_KullaniciAdi.Text = ""; }
+        protected void Page_Load(object sender, EventArgs e) { pnl_mesaj.Visible = false; }
 
         protected void lbtn_Giris_Click(object sender, EventArgs e)
         {
+            pnl_mesaj.Visible = false;
             if (dm.NullVeBoslukKontrol(tb_KullaniciAdi.Text) && dm.NullVeBoslukKontrol(tb_Sifre.Text))
             {
                 if (dm.ValidEposta(tb_KullaniciAdi.Text))

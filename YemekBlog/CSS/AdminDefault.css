@@ -34,7 +34,7 @@ body {
 .info {
     float: right;
     margin-right: 50px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
     .info label {
@@ -43,16 +43,7 @@ body {
         font-weight: 900;
     }
 
-    .info a {
-        font-size: 14pt;
-        color: #1D92DB;
-        text-decoration: none;
-    }
-
-        .info a:hover {
-            padding: 10px 0px;
-            color: #1A628F;
-        }
+    
 
 .menubar {
     min-height: 41px;
@@ -143,3 +134,13 @@ body {
         border-bottom: 1px ridge silver;
     }
 
+.silbutton{
+    background-color:#DB3433;
+    color:#8F1313
+}
+
+.cikis{
+    text-decoration:none;
+    background-color:#8F1313;
+    color:#ffffff;
+}
