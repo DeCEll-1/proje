@@ -13,11 +13,15 @@
     <form id="form1" runat="server">
         <div class="header">
             <img src="../Images/Baris%20Ozcan%20Polat%20Alemdar.jpg" />
-            
-                amongus
+
+            amongus
             <div class="info">
                 <asp:Label ID="lbl_info" runat="server"></asp:Label>&nbsp|&nbsp;
-                <asp:LinkButton ID="lbtn_exit" Text="Çıkış" style="text-decoration:none" OnClick="lbtn_exit_Click"  runat="server" />
+
+
+                <asp:LinkButton ID="lbtn_exit" Text="Çıkış" Style="text-decoration: none" OnClick="lbtn_exit_Click" runat="server">
+                <img src="../Images/Exit.jpg" />
+                </asp:LinkButton>
             </div>
         </div>
         <div class="menubar">
@@ -30,7 +34,6 @@
         </div>
         <div class="content">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
             </asp:ContentPlaceHolder>
         </div>
     </form>
