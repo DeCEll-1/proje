@@ -1,8 +1,6 @@
 USE master
 GO
-USE GridTest_DB
-GO
-DROP DATABASE IF EXISTS Yemek_DB 
+DROP DATABASE IF EXISTS Yemek_DB
 GO
 CREATE DATABASE Yemek_DB
 GO
@@ -67,7 +65,6 @@ CREATE TABLE Makaleler(
 	TamResimAdi nvarchar(255),
 	YuklemeTarihi datetime NOT NULL,
 	Okundu int,
-	MakaleLike int,
 	IsDeleted bit NOT NULL,
 	CONSTRAINT pk_makaleler PRIMARY KEY (ID),
 	CONSTRAINT fk_makalelerKategori FOREIGN KEY (KategoriID) REFERENCES Kategoriler(ID),
@@ -84,6 +81,7 @@ CREATE TABLE Yorumlar(
 	YorumTarihi datetime NOT NULL,
 	YorumLike int,
 	IsDeleted bit NOT NULL,
+	KullaniciAdi NVARCHAR (64) NOT NULL,
 	CONSTRAINT pk_yorumlar PRIMARY KEY (ID),
 	CONSTRAINT fk_yorumlarMakale FOREIGN KEY (MakaleID) REFERENCES Makaleler(ID),
 	CONSTRAINT fk_yorumlarKullanici FOREIGN KEY (KullaniciID) REFERENCES Kullaniciler(ID),
@@ -98,5 +96,5 @@ CREATE TABLE Likelar(
 	Tur bit NOT NULL,
 	CONSTRAINT fk_likelarKullanici FOREIGN KEY (KullaniciID) REFERENCES Kullaniciler(ID),
 	CONSTRAINT fk_likelarYorumlar FOREIGN KEY (YorumID) REFERENCES Yorumlar(ID),
-)
+);
 USE master

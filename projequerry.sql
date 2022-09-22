@@ -9,7 +9,7 @@ SELECT Mak.ID,Mak.KategoriID,Kat.KategoriAdi,Mak.YoneticiID,Yon.Adi,Yet.YetkiAdi
 --listele kullanýcýlar
 SELECT ID,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogunTarihi,IsDeleted FROM Kullaniciler WHERE IsDeleted = 1
 --listele yorum
-SELECT yor.MakaleID, yor.KullaniciID, yor.Icerik,yor.YorumTarihi,yor.YorumLike,yor.IsDeleted FROM Yorumlar AS yor JOIN Makaleler AS mak ON  yor.MakaleID = mak.ID JOIN Kullaniciler AS kul ON yor.KullaniciID = kul.ID JOIN Kategoriler AS kat ON mak.KategoriID = kat.ID WHERE yor.IsDeleted = @IsDeleted
+SELECT yor.MakaleID,yor.KullaniciAdi, yor.KullaniciID, yor.Icerik,yor.YorumTarihi,yor.YorumLike,yor.IsDeleted  FROM Yorumlar AS yor JOIN Makaleler AS mak ON  yor.MakaleID = mak.ID JOIN Kullaniciler AS kul ON yor.KullaniciID = kul.ID JOIN Kategoriler AS kat ON mak.KategoriID = kat.ID WHERE yor.IsDeleted = 1
 --listele like
 SELECT li.Tur FROM Likelar AS li WHERE li.YorumID = @ID
 -------------------
@@ -18,15 +18,15 @@ SELECT li.Tur FROM Likelar AS li WHERE li.YorumID = @ID
 --ekleler start
 -------------------
 --ekle yönetici
-INSERT INTO Yoneticiler(YetkiID,Adi,Soyadi,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogunTarihi,IsDeleted) VALUES(1,'trabzon','yolo','liveonce','gudm8@asd.fgh','trabzon',2020-08-08,2020-08-08,0)
+INSERT INTO Yoneticiler(YetkiID,Adi,Soyadi,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogunTarihi,IsDeleted) VALUES(1,'root','root','root','root@gmail.com','root',2020-08-08,2020-08-08,0)
 --ekle kategori
 INSERT INTO Kategoriler(KategoriAdi,IsDeleted) VALUES('çaylý yemekler',0)
 --ekle makale
-INSERT INTO Makaleler(KategoriID,YoneticiID,Baslik,Ozet,Tamicerik,ThumbnailAdi,TamResimAdi,YuklemeTarihi,Okundu,IsDeleted) VALUES(1,1,'test','amogus','<instert full text here>',NULL,NULL,2020-08-08,0,0)
+INSERT INTO Makaleler(KategoriID,YoneticiID,Baslik,Ozet,Tamicerik,ThumbnailAdi,TamResimAdi,YuklemeTarihi,Okundu,IsDeleted) VALUES(1,2,'test','amogus','<instert full text here>',NULL,NULL,2020-08-08,0,0)
 --ekle kullanýcý
 INSERT INTO Kullaniciler(KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogunTarihi,OzelSoru,IsDeleted) VALUES('hacý','HacýnýnÞalgamý@gmail.com','gýrmýzý',2020-08-08,2020-08-08,'þalgam',0)
 --ekle yorum
-INSERT INTO Yorumlar(MakaleID,KullaniciID,Icerik,YorumTarihi,YorumLike,IsDeleted) VALUES(3,2,'Çok güzel olmuþ.',2020-08-08,0,1)
+INSERT INTO Yorumlar(MakaleID,KullaniciID,Icerik,YorumTarihi,YorumLike,IsDeleted,KullaniciAdi) VALUES(4,1,'çok iyi',2020-08-08,0,0,'hacý')
 --ekle like
 INSERT INTO Likelar(YorumID,KullaniciID,Tur) VALUES(5,1,0)
 -------------------

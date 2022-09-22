@@ -3,21 +3,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    asd
     <asp:ListView runat="server" ID="lv_yorumlar" OnItemCommand="lv_yorumlar_ItemCommand">
         <LayoutTemplate>
             <table class="table" cellspacing="0">
                 <tr>
+                    <th>Yetkisi</th>
+                    <th>Kategori Adı</th>
+                    <th>Başlık</th>
                     <th>Kullanıcı Adı</th>
-                    <th>Makale kategorisi</th>
-                    <th>Makale Adı</th>
-                    <th>Kullanıcı Adı</th>
-                    <img src="../Images/Smile.png" />
+                    <th>Okunma Sayısı</th>
+                    <th></th>
+                    <th>
+                        <img src="../Images/Smile.png" width="50" /></th>
                 </tr>
                 <asp:PlaceHolder ID="ItemPlaceHolder" runat="server" />
             </table>
         </LayoutTemplate>
-
         <ItemTemplate>
             <tr>
                 <td><%#Eval("KullaniciAdi") %></td>
@@ -29,6 +30,7 @@
                 <td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>
                 <td>
                     <asp:LinkButton ID="lbtn_AktifEt" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="Aktif" runat="server">AktifEt</asp:LinkButton>&nbsp;|&nbsp;
+                    <asp:LinkButton ID="lbtn_KaliciSil" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="KaliciSil" runat="server">Kalıcı Sil</asp:LinkButton>&nbsp;|&nbsp;
                 </td>
             </tr>
         </ItemTemplate>
@@ -49,12 +51,16 @@
         <EmptyDataTemplate>
             <table class="table" cellspacing="0">
                 <tr>
+                    <th>Yetkisi</th>
+                    <th>Kategori Adı</th>
+                    <th>Başlık</th>
                     <th>Kullanıcı Adı</th>
-                    <th>Makale kategorisi</th>
-                    <th>Makale Adı</th>
-                    <th>Kullanıcı Adı</th>
-                    <th><a href="../Images/&">../Images/&</a></th>
+                    <th>Okunma Sayısı</th>
+                    <th><img src="../Images/Smile.png" width="30"/></th>
                 </tr>
+                    <tr>
+                        <td colspan="6">Henüz Makale Eklenmedi</td>
+                    </tr>
                 <asp:PlaceHolder ID="ItemPlaceHolder" runat="server" />
             </table>
         </EmptyDataTemplate>
@@ -64,22 +70,22 @@
         <LayoutTemplate>
             <table class="table" cellspacing="0">
                 <tr>
+                    <th>Yetkisi</th>
+                    <th>Kategori Adı</th>
+                    <th>Başlık</th>
                     <th>Kullanıcı Adı</th>
-                    <th>Makale kategorisi</th>
-                    <th>Makale Adı</th>
-                    <th>Kullanıcı Adı</th>
-                    <img src="../Images/Smile.png" />
+                    <th>Okunma Sayısı</th>
+                    <img src="../Images/Smile.png" width="30" />
                 </tr>
                 <asp:PlaceHolder ID="ItemPlaceHolder" runat="server" />
             </table>
         </LayoutTemplate>
-
         <ItemTemplate>
             <tr>
                 <td><%#Eval("YetkiAdi") %></td>
                 <td><%#Eval("KategoriAdi") %></td>
                 <td><%#Eval("Baslik") %></td>
-                <td><%#Eval("YuklemeTarihi") %></td>
+                <td><%#Eval("KullaniciAdi") %></td>
                 <td><%#Eval("Okundu") %></td>
                 <td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>
                 <td>
@@ -104,12 +110,16 @@
         <EmptyDataTemplate>
                 <table class="table" cellspacing="0">
                 <tr>
-                    <th>Makale kategorisi</th>
-                    <th>Makale Adı</th>
                     <th>Kullanıcı Adı</th>
-                    <th>Yayındamı</th><img src="../Images/TheRock.jpg" />
-                    <th><a href="../Images/&">../Images/&</a></th>
+                    <th>Kategoei Adı</th>
+                    <th>Başlık</th>
+                    <th>Yayındamı</th>
+                    <th>
+                        <img src="../Images/Smile.png" width="30" /></th>
                 </tr>
+                    <tr>
+                        <td colspan="6">Henüz Yorum Eklenmedi</td>
+                    </tr>
                 <asp:PlaceHolder ID="ItemPlaceHolder" runat="server" />
             </table>
         </EmptyDataTemplate>
