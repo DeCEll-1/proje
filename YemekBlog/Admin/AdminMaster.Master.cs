@@ -14,7 +14,7 @@ namespace YemekBlog.Admin
 
         }
 
-        protected void lbtn_exit_Click(object sender, EventArgs e)
+        protected void btn_exit_Click(object sender, EventArgs e)
         {
 
         }
