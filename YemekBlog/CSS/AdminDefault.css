@@ -4,6 +4,7 @@
 }
 
 body {
+    background-image: url('../images/starscape.jpg');
 }
 
 .header {
@@ -100,11 +101,11 @@ body {
     border: 2px ridge #DBD948;
     background-color: #1D92DB;
     border-radius: 11px;
-    opacity:0.2;
+    opacity:0.4;
 }
 
     .table:hover{
-        opacity:0.6;
+        opacity:0.9;
         background-color:#1A628F;
     }
 

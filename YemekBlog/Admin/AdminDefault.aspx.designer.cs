@@ -15,15 +15,6 @@ namespace YemekBlog.Admin
     {
 
         /// <summary>
-        /// lv_yorumlar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lv_yorumlar;
-
-        /// <summary>
         /// lv_Makaleler control.
         /// </summary>
         /// <remarks>
@@ -31,5 +22,14 @@ namespace YemekBlog.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView lv_Makaleler;
+
+        /// <summary>
+        /// lv_yorumlar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView lv_yorumlar;
     }
 }

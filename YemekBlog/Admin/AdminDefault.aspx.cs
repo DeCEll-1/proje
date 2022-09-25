@@ -13,7 +13,7 @@ namespace YemekBlog.Admin
         DataModel dm = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
-            lv_yorumlar.DataSource = dm.YorumListele(true);
+            lv_yorumlar.DataSource = dm.YorumListele(false);
             lv_yorumlar.DataBind();
             lv_Makaleler.DataSource = dm.MakaleListele();
             lv_Makaleler.DataBind();
@@ -34,7 +34,7 @@ namespace YemekBlog.Admin
         protected void lv_yorumlar_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             int ID = Convert.ToInt32(e.CommandArgument);
-            if (e.CommandName== "aktif")
+            if (e.CommandName== "Aktif")
             {
                 if (dm.YorumSil(ID,false))
                 {
