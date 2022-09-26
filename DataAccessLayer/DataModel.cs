@@ -387,7 +387,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                List<Makaleler> kategoriler = dbConnection.Query<Makaleler>("mak.YoneticiID,mak.Baslik,mak.ID, mak.KategoriID,mak.Ozet,mak.Tamicerik,mak.ThumbnailAdi,TamResimAdi,mak.YuklemeTarihi,mak.Okundu,mak.IsDeleted,kat.KategoriAdi,yon.Adi,yet.YetkiAdi FROM Makaleler AS mak JOIN Yoneticiler AS yon ON Mak.YoneticiID = yon.ID JOIN Kategoriler AS kat ON Mak.KategoriID = kat.ID JOIN Yetkiler AS yet ON Yon.YetkiID = Yet.ID").ToList();
+                List<Makaleler> kategoriler = dbConnection.Query<Makaleler>("mak.YoneticiID,mak.Baslik,mak.ID, mak.KategoriID,mak.Ozet,mak.Tamicerik,mak.ThumbnailAdi,mak.TamResimAdi,mak.YuklemeTarihi,mak.Okundu,mak.IsDeleted,kat.KategoriAdi,yon.Adi,yet.YetkiAdi FROM Makaleler AS mak JOIN Yoneticiler AS yon ON Mak.YoneticiID = yon.ID JOIN Kategoriler AS kat ON Mak.KategoriID = kat.ID JOIN Yetkiler AS yet ON Yon.YetkiID = Yet.ID").ToList();
                 return kategoriler;
             }
             catch (Exception)

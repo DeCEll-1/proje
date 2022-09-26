@@ -36,16 +36,16 @@ namespace YemekBlog.Admin
             int ID = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName== "Aktif")
             {
-                if (dm.YorumSil(ID,false))
+                if (dm.YorumSil(ID,true))
                 {
-                    Response.Redirect("YorumIndex.aspx");
+                    Response.Redirect("AdminDefault.aspx");
                 }
             }
             if (e.CommandName == "KaliciSil")
             {
                 if (dm.YorumKaliciSil(ID))
                 {
-                    Response.Redirect("YorumIndex.aspx");
+                    Response.Redirect("AdminDefault.aspx");
                 }
             }
         }
