@@ -58,7 +58,7 @@ namespace DataAccessLayer
             }
         }
         /// <summary>
-        /// boşsa true gönderir
+        /// boşsa değilse true gönderir
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
@@ -373,7 +373,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                List<Makaleler> kategoriler = dbConnection.Query<Makaleler>("mak.YoneticiID,mak.Baslik,mak.ID, mak.KategoriID,mak.Ozet,mak.Tamicerik,mak.ThumbnailAdi,TamResimAdi,mak.YuklemeTarihi,mak.Okundu,mak.IsDeleted,kat.KategoriAdi,yon.Adi,yet.YetkiAdi FROM Makaleler AS mak JOIN Yoneticiler AS yon ON Mak.YoneticiID = yon.ID JOIN Kategoriler AS kat ON Mak.KategoriID = kat.ID JOIN Yetkiler AS yet ON Yon.YetkiID = Yet.ID WHERE mak.IsDeleted =@IsDeleted", new { IsDeleted }).ToList();
+                List<Makaleler> kategoriler = dbConnection.Query<Makaleler>("SELECT mak.ID,mak.YoneticiID,mak.Baslik, mak.KategoriID,mak.Ozet,mak.Tamicerik,mak.ThumbnailAdi,TamResimAdi,mak.YuklemeTarihi,mak.Okundu,mak.IsDeleted,kat.KategoriAdi,yon.Adi,yet.YetkiAdi FROM Makaleler AS mak JOIN Yoneticiler AS yon ON Mak.YoneticiID = yon.ID JOIN Kategoriler AS kat ON Mak.KategoriID = kat.ID JOIN Yetkiler AS yet ON Yon.YetkiID = Yet.ID WHERE mak.IsDeleted =@IsDeleted", new { IsDeleted }).ToList();
                 return kategoriler;
             }
             catch (Exception)
@@ -387,7 +387,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                List<Makaleler> kategoriler = dbConnection.Query<Makaleler>("mak.YoneticiID,mak.Baslik,mak.ID, mak.KategoriID,mak.Ozet,mak.Tamicerik,mak.ThumbnailAdi,mak.TamResimAdi,mak.YuklemeTarihi,mak.Okundu,mak.IsDeleted,kat.KategoriAdi,yon.Adi,yet.YetkiAdi FROM Makaleler AS mak JOIN Yoneticiler AS yon ON Mak.YoneticiID = yon.ID JOIN Kategoriler AS kat ON Mak.KategoriID = kat.ID JOIN Yetkiler AS yet ON Yon.YetkiID = Yet.ID").ToList();
+                List<Makaleler> kategoriler = dbConnection.Query<Makaleler>("SELECT mak.YoneticiID,mak.Baslik,mak.ID, mak.KategoriID,mak.Ozet,mak.Tamicerik,mak.ThumbnailAdi,mak.TamResimAdi,mak.YuklemeTarihi,mak.Okundu,mak.IsDeleted,kat.KategoriAdi,yon.Adi,yet.YetkiAdi FROM Makaleler AS mak JOIN Yoneticiler AS yon ON Mak.YoneticiID = yon.ID JOIN Kategoriler AS kat ON Mak.KategoriID = kat.ID JOIN Yetkiler AS yet ON Yon.YetkiID = Yet.ID").ToList();
                 return kategoriler;
             }
             catch (Exception)
@@ -651,7 +651,7 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                List<Yorumlar> yorumlar = dbConnection.Query<Yorumlar>("SELECT yor.MakaleID, kul.KullaniciAdi, yor.KullaniciID, mak.Baslik, yor.Icerik, yor.YorumTarihi, yor.YorumLike, yor.IsDeleted FROM Yorumlar AS yor JOIN Kullaniciler AS kul ON yor.KullaniciID = kul.ID JOIN Makaleler AS mak ON yor.MakaleID = mak.ID WHERE yor.IsDeleted = @IsDeleted", new { IsDeleted }).ToList();
+                List<Yorumlar> yorumlar = dbConnection.Query<Yorumlar>("SELECT yor.ID yor.MakaleID, kul.KullaniciAdi, yor.KullaniciID, mak.Baslik, yor.Icerik, yor.YorumTarihi, yor.YorumLike, yor.IsDeleted FROM Yorumlar AS yor JOIN Kullaniciler AS kul ON yor.KullaniciID = kul.ID JOIN Makaleler AS mak ON yor.MakaleID = mak.ID WHERE yor.IsDeleted = @IsDeleted", new { IsDeleted }).ToList();
                 return yorumlar;
 
             }
@@ -671,12 +671,11 @@ namespace DataAccessLayer
             try
             {
                 dbConnection.Open();
-                dbConnection.Execute("UPDATE Yorumlar SET IsDeleted = @IsDeleted WHERE ID = @ID", new { IsDeleted, ID});
+                dbConnection.Execute("UPDATE Yorumlar SET IsDeleted = @IsDeleted WHERE ID = @ID", new { IsDeleted, ID });
                 return true;
             }
             catch (Exception)
             {
-
                 return false;
             }
             finally
@@ -686,17 +685,16 @@ namespace DataAccessLayer
 
         }
         //tamam
-        public bool YorumKaliciSil(int ID)
+        public bool YorumKaliciSil(int id)
         {
             try
             {
                 dbConnection.Open();
-                dbConnection.Execute("DELETE FROM Yorumlar WHERE ID=@id", new { ID });
+                dbConnection.Execute("DELETE FROM Yorumlar WHERE ID=@id", new { id });
                 return true;
             }
             catch (Exception)
             {
-
                 return false;
             }
             finally

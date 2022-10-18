@@ -109,6 +109,18 @@ body {
         background-color:#1A628F;
     }
 
+    .table th {
+        text-align: center;
+        border-bottom: 2px solid #1A628F;
+        padding: 8px;
+    }
+
+    .table tr td {
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px ridge silver;
+    }
+
 .yarimtable {
     width:400px;
     border: 2px ridge #1A628F;
@@ -123,21 +135,17 @@ body {
         opacity:0.4;
     }
 
-    .table th{
-        text-align:center;
-        border-bottom: 2px solid #1A628F;
-        padding: 8px;
-    }
-
-    .table tr td {
-        text-align: center;
-        padding: 8px;
-        border-bottom: 1px ridge silver;
-    }
-
 .silbutton{
     background-color:#DB3433;
     color:#8F1313
+}
+
+.hata{
+    background-color: #8F1313
+}
+
+.form {
+    text-decoration:none;
 }
 
 .cikis{
@@ -145,4 +153,11 @@ body {
     background-color:#8F1313;
     color:#ffffff;
     
+}
+
+.linkbutton{
+    text-decoration:none;
+
+
+
 }

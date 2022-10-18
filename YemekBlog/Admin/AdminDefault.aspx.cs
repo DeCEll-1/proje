@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using DataAccessLayer.sql_stuff;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,23 @@ namespace YemekBlog.Admin
         protected void lv_Makaleler_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             int ID = Convert.ToInt32(e.CommandArgument);
+            Makaleler makaleler = dm.GetMakale(ID);
             if (e.CommandName == "sil")
             {
-                if (dm.MakaleSilGuncelle(false,ID))
+                bool a = makaleler.IsDeleted;
+                if (a)
                 {
-                    Response.Redirect("adminDefault.aspx");
+                    if (dm.MakaleSilGuncelle(false, ID))
+                    {
+                        Response.Redirect("adminDefault.aspx");
+                    }
+                }
+                else
+                {
+                    if (dm.MakaleSilGuncelle(true, ID))
+                    {
+                        Response.Redirect("adminDefault.aspx");
+                    }
                 }
             }
         }
@@ -45,7 +58,7 @@ namespace YemekBlog.Admin
             {
                 if (dm.YorumKaliciSil(ID))
                 {
-                    Response.Redirect("AdminDefault.aspx");
+                    //Response.Redirect("AdminDefault.aspx");
                 }
             }
         }

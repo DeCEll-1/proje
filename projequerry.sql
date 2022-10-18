@@ -13,7 +13,7 @@ JOIN Yetkiler AS Yet ON Yon.YetkiID = Yet.ID WHERE Mak.IsDeleted =0 AND Mak.Kate
 --listele kullanýcýlar
 SELECT ID,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogunTarihi,IsDeleted FROM Kullaniciler WHERE IsDeleted = 1
 --listele yorum AAAAAA
-SELECT yor.MakaleID, kul.KullaniciAdi, yor.KullaniciID, mak.Baslik, yor.Icerik, yor.YorumTarihi, yor.YorumLike, yor.IsDeleted FROM Yorumlar AS yor JOIN Kullaniciler AS kul ON yor.KullaniciID = kul.ID JOIN Makaleler AS mak ON yor.MakaleID = mak.ID WHERE yor.IsDeleted = 0
+SELECT yor.ID yor.MakaleID, kul.KullaniciAdi, yor.KullaniciID, mak.Baslik, yor.Icerik, yor.YorumTarihi, yor.YorumLike, yor.IsDeleted FROM Yorumlar AS yor JOIN Kullaniciler AS kul ON yor.KullaniciID = kul.ID JOIN Makaleler AS mak ON yor.MakaleID = mak.ID WHERE yor.IsDeleted = 0
 --listele like
 SELECT li.Tur FROM Likelar AS li WHERE li.YorumID = @ID
 -------------------

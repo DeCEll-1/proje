@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminDefault.aspx" />
+    <Content Include="Admin\YoneticiEkle.aspx" />
     <Content Include="Admin\YoneticiGiris.aspx" />
     <Content Include="CSS\AdminDefault.css" />
     <Content Include="CSS\AdminLoginCSS.css" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="Admin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\YoneticiEkle.aspx.cs">
+      <DependentUpon>YoneticiEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\YoneticiEkle.aspx.designer.cs">
+      <DependentUpon>YoneticiEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\YoneticiGiris.aspx.cs">
       <DependentUpon>YoneticiGiris.aspx</DependentUpon>
