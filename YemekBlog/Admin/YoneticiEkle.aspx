@@ -28,6 +28,11 @@
             </tr>
             <tr>
                 <td>
+                  Format:1905-06-28  <asp:TextBox ID="tb_DogumTarihi" CssClass="textbox" runat="server" PlaceHolder="Doğum Tarihi" ></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <asp:RadioButton Text="Yönetici" runat="server" ID="rbtn_Admin"></asp:RadioButton>
 
 

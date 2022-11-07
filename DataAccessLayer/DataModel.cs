@@ -13,7 +13,9 @@ namespace DataAccessLayer
 {
     public class DataModel
     {
+        SqlConnection con; SqlCommand cmd;
         IDbConnection dbConnection = new SqlConnection(ConnectionString.ConStrLocal);
+        public DataModel() { con = new SqlConnection(ConnectionString.ConStrLocal); cmd = con.CreateCommand(); }
         //tamam
         #region Validasyonlar
         public bool ValidEposta(string eposta)
@@ -196,15 +198,27 @@ namespace DataAccessLayer
         {
             try
             {
-                dbConnection.Open();
-                dbConnection.Execute("INSERT INTO Yoneticiler(YetkiID,Adi,SoyAdi,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogunTarihi,IsDeleted) VALUES(@YetkiID,@Adi,@SoyAdi,@KullaniciAdi,@Eposta,@Sifre,@UyelikTarihi,@DogunTarihi,@IsDeleted)", new { y });
+                cmd.CommandText = "INSERT INTO Yoneticiler(YetkiID,Adi,SoyAdi,KullaniciAdi,Eposta,Sifre,UyelikTarihi,DogunTarihi,IsDeleted) VALUES(@YetkiID,@Adi,@SoyAdi,@KullaniciAdi,@Eposta,@Sifre,@UyelikTarihi,@DogunTarihi,@IsDeleted)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@YetkiID", y.YetkiID);
+                cmd.Parameters.AddWithValue("@Adi", y.Adi);
+                cmd.Parameters.AddWithValue("@SoyAdi", y.SoyAdi);
+                cmd.Parameters.AddWithValue("@KullaniciAdi", y.KullaniciAdi);
+                cmd.Parameters.AddWithValue("@Eposta", y.Eposta);
+                cmd.Parameters.AddWithValue("@Sifre", y.Sifre);
+                cmd.Parameters.AddWithValue("@UyelikTarihi", y.UyelikTarihi);
+                cmd.Parameters.AddWithValue("@DogunTarihi", y.DogunTarihi);
+                cmd.Parameters.AddWithValue("@IsDeleted", y.IsDeleted);
+                con.Open();
+                cmd.ExecuteNonQuery();
+
                 return true;
             }
             catch (Exception)
             {
                 return false;
             }
-            finally { dbConnection.Close(); }
+            finally { con.Close(); }
         }
         public bool YoneticiSilGuncelle(int IsDeleted, int ID)
         {

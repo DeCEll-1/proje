@@ -32,7 +32,7 @@ namespace YemekBlog.Admin
 
             if (dm.NullVeBoslukKontrol(tb_Soyad.Text))
             {
-                y.Adi = tb_Soyad.Text;
+                y.SoyAdi = tb_Soyad.Text;
             }
             else
             {
@@ -42,13 +42,19 @@ namespace YemekBlog.Admin
 
             if (dm.NullVeBoslukKontrol(tb_KullaniciAdi.Text))
             {
-                y.Adi = tb_KullaniciAdi.Text;
+                y.KullaniciAdi = tb_KullaniciAdi.Text;
             }
             else
             {
                 Pnl_hata.Visible = true;
                 lbl_message.Text = "Değer Boş Bırakılamaz";
             }
+            if (dm.NullVeBoslukKontrol(tb_DogumTarihi.Text))
+            {
+                y.DogunTarihi = Convert.ToDateTime(tb_DogumTarihi.Text);
+            }
+
+            y.UyelikTarihi = DateTime.Now.Date;
 
             if (dm.NullVeBoslukKontrol(tb_Eposta.Text))
             {
@@ -78,7 +84,7 @@ namespace YemekBlog.Admin
             }
             if (dm.NullVeBoslukKontrol(tb_Sifre.Text))
             {
-                y.Adi = tb_Sifre.Text;
+                y.Sifre = tb_Sifre.Text;
             }
             else
             {
