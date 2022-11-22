@@ -60,7 +60,7 @@ namespace DataAccessLayer
             }
         }
         /// <summary>
-        /// boşsa değilse true gönderir
+        /// boşsa false gönderir
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
@@ -111,7 +111,7 @@ namespace DataAccessLayer
         {
             try
             {
-                int sayi = dbConnection.ExecuteScalar<int>("ELECT * FROM Kategoriler " +
+                int sayi = dbConnection.ExecuteScalar<int>("SELECT * FROM Kategoriler " +
                     "WHERE KategoriAdi = @Kategori", new { Kategori });
                 if (sayi != 1)
                 {
@@ -319,19 +319,22 @@ namespace DataAccessLayer
             finally { dbConnection.Close(); }
         }
         //tamam
-        public bool KategoriEkle(Yoneticiler y)
+        public bool KategoriEkle(Kategoriler y)
         {
             try
             {
-                dbConnection.Open();
-                dbConnection.Execute("INSERT INTO Kategoriler(KategoriAdi,IsDeleted) VALUES(@KategoriAdi,@IsDeleted)", new { y });
+                cmd.CommandText = "INSERT INTO Kategoriler(KategoriAdi,IsDeleted) VALUES(@KategoriAdi,@IsDeleted)";
+                cmd.Parameters.AddWithValue("@KategoriAdi", y.KategoriAdi);
+                cmd.Parameters.AddWithValue("@IsDeleted", y.IsDeleted);
+                con.Open();
+                cmd.ExecuteNonQuery();
                 return true;
             }
             catch (Exception)
             {
                 return false;
             }
-            finally { dbConnection.Close(); }
+            finally { con.Close(); }
         }
         //tamam
         public bool KategoriSilGuncelle(int IsDeleted, int ID)

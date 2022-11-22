@@ -12,11 +12,13 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <img src="../Images/Smile.png" />
+            <a href="AdminDefault.aspx">
+                <img src="../Images/Smile.png" />
+            </a>
             <div class="info">
                 <asp:Label ID="lbl_info" runat="server">&nbsp;&nbsp;</asp:Label>
                 &nbsp;&nbsp;|&nbsp;&nbsp;
-                <button style="text-decoration:none" onclick="btn_exit_Click"> Çıkış</button>
+                <button style="text-decoration:none" onclick="btn_exit_Click">Çıkış</button>
             </div>
         </div>
         <div class="menubar">
@@ -24,9 +26,17 @@
                 <a href="YoneticiEkle.aspx">
                     <li class="menuitem0">Yönetici Ekle</li>
                 </a>
-            </ul>
 
+                <a href="KategoriEKle.aspx">
+                    <li class="menuitem0">Kategori Ekle</li> 
+                </a>
+
+                <a href="MakaleEkle.aspx">
+                    <li class="menuitem0">MakaleEkle</li>
+                </a>
+            </ul>
         </div>
+
         <div class="content">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

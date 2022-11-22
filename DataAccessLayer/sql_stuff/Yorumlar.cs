@@ -14,7 +14,7 @@ namespace DataAccessLayer
         public string Baslik { get; set; }
         public string Icerik { get; set; }
         public DateTime YorumTarihi { get; set; }
-        public int YorumLike { get; set; }
+        public int? YorumLike { get; set; }
         public bool IsDeleted { get; set; }
         public string KullaniciAdi { get; set; }
     }

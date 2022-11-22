@@ -20,8 +20,7 @@ namespace DataAccessLayer.sql_stuff
         public string ThumbnailAdi { get; set; }
         public string TamResimAdi { get; set; }
         public DateTime YuklemeTarihi { get; set; }
-        public string Okundu { get; set; }
-        public int MakaleLike { get; set; }
+        public int? Okundu { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

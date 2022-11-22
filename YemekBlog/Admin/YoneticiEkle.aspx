@@ -37,6 +37,7 @@
 
 
                     <asp:RadioButton Text="Yazar" runat="server" ID="rbtn_Yazar"></asp:RadioButton>
+
                     <asp:Button ID="btn_Add" OnClick="btn_Add_Click" CssClass="buton" Text="Yonetici Ekle" runat="server" ></asp:Button>
                 </td>
             </tr>

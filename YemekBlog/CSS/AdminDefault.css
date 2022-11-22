@@ -1,11 +1,14 @@
 ﻿* {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
     background-image: url('../images/starscape.jpg');
 }
+
+
 
 .header {
     min-height: 80px;
@@ -44,7 +47,15 @@ body {
         font-weight: 900;
     }
 
-    
+.YarimForm {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px ridge #DBD948;
+    background-color: #1D92DB;
+    border-radius: 11px;
+    opacity: 0.4;
+}
 
 .menubar {
     min-height: 41px;
@@ -56,31 +67,31 @@ body {
         list-style-type: none;
     }
 
-    .menubar a{
+    .menubar a {
         text-decoration: none;
     }
 
-    .menubar a:hover .menuitem0 {
-        background-color: #DB3433;
-        color:#1D92DB;
-        border-bottom: 5px solid #1A628F;
-    }
+        .menubar a:hover .menuitem0 {
+            background-color: #DB3433;
+            color: #1D92DB;
+            border-bottom: 5px solid #1A628F;
+        }
 
-    .menubar a:hover .menuitem1 {
-        background-color: #DB3433;
-        color: #1D92DB;
-        border-bottom: 5px solid #1A628F;
-    }
+        .menubar a:hover .menuitem1 {
+            background-color: #DB3433;
+            color: #1D92DB;
+            border-bottom: 5px solid #1A628F;
+        }
 
-.menuitem0{
+.menuitem0 {
     color: #1A628F;
-    font-weight:300;
+    font-weight: 300;
     padding: 10px;
-    float:left;
+    float: left;
 }
 
 .menuitem1 {
-    margin-left:100px;
+    margin-left: 100px;
     color: #1A628F;
     font-weight: 300;
     padding: 10px;
@@ -91,22 +102,22 @@ body {
     background-image: url('../images/barış abi.jpg');
     width: 100%;
     min-height: 600px;
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 .table {
-    width:70%;
-    margin-left:auto;
-    margin-right:auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px ridge #DBD948;
     background-color: #1D92DB;
     border-radius: 11px;
-    opacity:0.4;
+    opacity: 0.4;
 }
 
-    .table:hover{
-        opacity:0.9;
-        background-color:#1A628F;
+    .table:hover {
+        opacity: 0.9;
+        background-color: #1A628F;
     }
 
     .table th {
@@ -122,42 +133,75 @@ body {
     }
 
 .yarimtable {
-    width:400px;
+    width: 400px;
     border: 2px ridge #1A628F;
-    background-color:#1D92DB;
-    border-radius:11px;
-    opacity:0,2;
+    background-color: #1D92DB;
+    border-radius: 11px;
+    opacity: 0,2;
 }
 
     .yarimtable:hover {
         border: 2px ridge #1D92DB;
         background-color: #1A628F;
-        opacity:0.4;
+        opacity: 0.4;
     }
 
-.silbutton{
-    background-color:#DB3433;
-    color:#8F1313
+.silbutton {
+    background-color: #DB3433;
+    color: #8F1313
 }
 
-.hata{
-    background-color: #8F1313
+.hata {
+    color: #DBD948;
+    background-color: #8F1313;
+    padding: 2px 5px;
 }
 
 .form {
-    text-decoration:none;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cikis{
-    text-decoration:none;
-    background-color:#8F1313;
-    color:#ffffff;
-    
+.kategoriekletable {
+    width: auto;
+    display: flow;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border: 2px ridge #DBD948;
+    background-color: #1D92DB;
+    border-radius: 11px;
+    opacity: 0.9;
+    text-decoration: none;
+    text-align: center;
 }
 
-.linkbutton{
-    text-decoration:none;
+    .kategoriekletable tr td {
+        padding: 5px;
+    }
 
+.aspbutton {
+    align-self: center;
+}
 
+.formtablediv {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 
+.cikis {
+    text-decoration: none;
+    background-color: #8F1313;
+    color: #ffffff;
+}
+
+.linkbutton {
+    text-decoration: none;
 }
