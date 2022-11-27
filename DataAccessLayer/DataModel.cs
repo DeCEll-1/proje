@@ -303,7 +303,7 @@ namespace DataAccessLayer
         //tamam
         #region kategori CRUD+listnget
         //tamam
-        public List<Kategoriler> KategoriListele(bool IsDeleted)
+        public List<Kategoriler> KategoriListele(int IsDeleted)
         {
             try
             {
