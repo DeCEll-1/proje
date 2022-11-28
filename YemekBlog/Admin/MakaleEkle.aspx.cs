@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using DocumentFormat.OpenXml.Bibliography;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace YemekBlog.Admin
             {
                 ddl_Kategori.DataSource = dm.KategoriListele(0);
                 ddl_Kategori.DataBind();
+
             }
         }
     }

@@ -6,7 +6,6 @@
 <head runat="server">
     <title></title>
     <link href="../CSS/AdminDefault.css" rel="stylesheet" />
-    <script src="CKEditor/ckeditor/ckeditor.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -44,7 +43,4 @@
         </div>
     </form>
 </body>
-     <script>
-         CKEDITOR.replace('ctl00$ContentPlaceHolder1$tb_Content');
-     </script>
 </html>

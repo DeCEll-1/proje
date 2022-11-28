@@ -76,6 +76,30 @@ body {
     margin: 5px;
 }
 
+/*.formButton {
+    margin-left: 20px;
+    background-color: #F1612B;
+    color: white;
+    font-size: 16pt;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: 700;
+    opacity: 1 !important;
+}*/
+
+.formButton {
+    background-color: #1A628F;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 6px;
+    opacity: 1 !important;
+    font-size:16pt;
+    width:auto;
+}
+
 .menubar {
     min-height: 41px;
     width: 100%;
