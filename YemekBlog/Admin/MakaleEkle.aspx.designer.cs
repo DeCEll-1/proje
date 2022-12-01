@@ -15,6 +15,15 @@ namespace YemekBlog.Admin
     {
 
         /// <summary>
+        /// pnl_Hata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnl_Hata;
+
+        /// <summary>
         /// lbl_Hata control.
         /// </summary>
         /// <remarks>

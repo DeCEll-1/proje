@@ -8,12 +8,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="form" style="">
 
-        <asp:Label runat="server" CssClass="hata" Visible="true">
+        <asp:panel runat="server" ID="pnl_Hata" CssClass="hata" Visible="false">
             <asp:Label runat="server" ID="lbl_Hata"></asp:Label>
-        </asp:Label>
+        </asp:panel>
 
         <div class="form" style="min-height: 400px;">
-            <div class="YarimForm" style="display:grid;margin-right: 50px; margin-top: 50px; float: right; min-height: 500px; width: 40%; text-align: center;">
+            <div class="YarimForm" style="display: grid; margin-right: 50px; margin-top: 50px; float: right; min-height: 500px; width: 40%; text-align: center;">
 
                 <div>
                     <asp:TextBox ID="tb_baslik" runat="server" CssClass="textbox" Style="font-size: 13pt; text-align: center;" placeholder="Makale Başlığı"></asp:TextBox>
@@ -43,10 +43,10 @@
                     <asp:CheckBox ID="cb_confirm" runat="server" Text="Onaylıyorum" Checked="false" Style="float: right;" />
                 </div>
                 <br />
-                    <div style="height: 36px;align-self:center;">
-                        <asp:LinkButton CssClass="formButton" ID="lbtn_submit" runat="server" Text="Makale Ekle"></asp:LinkButton>
-                    </div>
-                    
+                <div style="height: 36px; align-self: center;">
+                    <asp:LinkButton CssClass="formButton" ID="lbtn_submit" runat="server" Text="Makale Ekle" OnClick="lbtn_submit_Click"></asp:LinkButton>
+                </div>
+
             </div>
 
 
@@ -59,11 +59,11 @@
                     <asp:TextBox ID="tb_list" TextMode="MultiLine" runat="server" MaxLength="256" CssClass="textboxfill" Style="resize: none; width: 98%; height: 72%;"></asp:TextBox>
                 </div>
                 <div>
+                    <label class="hata">BURAYA FOTOĞRAF ATMANIZ HATAYLA SONUÇLANIR</label>
                     <asp:TextBox runat="server" ID="tb_Content" TextMode="MultiLine"></asp:TextBox>
-
                     <script>
                         CKEDITOR.replace('ctl00$ContentPlaceHolder1$tb_Content');
-                        CKEDITOR.config.height = 252;
+                        CKEDITOR.config.height = 233;
                     </script>
                 </div>
 

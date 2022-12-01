@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
         <div class="header">
             <a href="AdminDefault.aspx">
-                <img src="../Images/Smile.png" />
+                <img src="../Images/Smile.png" style="width:121px;height:121px;" />
             </a>
             <div class="info">
                 <asp:Label ID="lbl_info" runat="server">&nbsp;&nbsp;</asp:Label>

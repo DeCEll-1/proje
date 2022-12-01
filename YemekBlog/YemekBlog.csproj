@@ -390,6 +390,7 @@
     <Content Include="CSS\AdminDefault.css" />
     <Content Include="CSS\AdminLoginCSS.css" />
     <Content Include="Images\Exit.jpg" />
+    <Content Include="Images\Sad.png" />
     <Content Include="Images\Smile.png" />
     <Content Include="Images\Baris Ozcan Polat Alemdar.jpg" />
     <Content Include="Images\BarisAbi.jpg" />

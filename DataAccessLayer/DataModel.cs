@@ -414,7 +414,7 @@ namespace DataAccessLayer
             finally { dbConnection.Close(); }
         }
         //tamam
-        public bool MakaleEkle(Kategoriler y)
+        public bool MakaleEkle(Makaleler y)
         {
             try
             {
