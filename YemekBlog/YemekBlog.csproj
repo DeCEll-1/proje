@@ -387,6 +387,7 @@
     <Content Include="Admin\MakaleEkle.aspx" />
     <Content Include="Admin\YoneticiEkle.aspx" />
     <Content Include="Admin\YoneticiGiris.aspx" />
+    <Content Include="Admin\YoneticiListesi.aspx" />
     <Content Include="CSS\AdminDefault.css" />
     <Content Include="CSS\AdminLoginCSS.css" />
     <Content Include="Images\Exit.jpg" />
@@ -440,6 +441,13 @@
     </Compile>
     <Compile Include="Admin\YoneticiGiris.aspx.designer.cs">
       <DependentUpon>YoneticiGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\YoneticiListesi.aspx.cs">
+      <DependentUpon>YoneticiListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\YoneticiListesi.aspx.designer.cs">
+      <DependentUpon>YoneticiListesi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,7 +10,7 @@
                     <th>Kullanıcı Adı</th>
                     <th>Kategori Adı</th>
                     <th>Başlık</th>
-                    <th>Özet</th>
+                    <th style="width: 350px;">Özet</th>
                     <th>Yetki Adı</th>
                     <th>Yükleme Tarihi</th>
                     <th>Yayındamı?</th>
@@ -31,7 +31,9 @@
                 <td><%#Eval("YuklemeTarihi") %></td>
                 <td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>
                 <td>
-                    <asp:LinkButton ID="lbtn_AktifEt" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="sil" runat="server">Aktif Et</asp:LinkButton>&nbsp;|&nbsp;
+                    <asp:LinkButton ID="lbtn_AktifEt" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="AktifEt" runat="server">Aktif Et</asp:LinkButton>
+                    <br />
+                    <asp:LinkButton ID="lbtn_KaliciSil" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="KaliciSil" runat="server">Kalıcı Sil</asp:LinkButton>
                 </td>
             </tr>
         </ItemTemplate>
@@ -45,7 +47,9 @@
                 <td><%#Eval("YuklemeTarihi") %></td>
                 <td><%# (bool)Eval("IsDeleted") ==false ? "Yayında" :"Kapalı"%></td>
                 <td>
-                    <asp:LinkButton ID="lbtn_AktifEt" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="sil" runat="server">Aktif Et</asp:LinkButton>&nbsp;|&nbsp;
+                    <asp:LinkButton ID="lbtn_AktifEt" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="AktifEt" runat="server">Aktif Et</asp:LinkButton>
+                    <br />
+                    <asp:LinkButton ID="lbtn_KaliciSil" CssClass="silbutton" CommandArgument='<%# Eval("ID") %>' CommandName="KaliciSil" runat="server">Kalıcı Sil</asp:LinkButton>
                 </td>
             </tr>
         </AlternatingItemTemplate>
@@ -55,7 +59,7 @@
                     <th>Kullanıcı Adı</th>
                     <th>Kategori Adı</th>
                     <th>Başlık</th>
-                    <th>Özet</th>
+                    <th style="width: 350px;">Özet</th>
                     <th>Yetki Adı</th>
                     <th>Yükleme Tarihi</th>
                     <th>Yayındamı?</th>

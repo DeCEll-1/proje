@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="MakaleEkle.aspx.cs" Inherits="YemekBlog.Admin.MakaleEkle" %>
+﻿<%@ Page ValidateRequest="false" Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="MakaleEkle.aspx.cs" Inherits="YemekBlog.Admin.MakaleEkle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="CKEditor/ckeditor/ckeditor.js"></script>
@@ -8,13 +8,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="form" style="">
 
-        <asp:panel runat="server" ID="pnl_Hata" CssClass="hata" Visible="false">
-            <asp:Label runat="server" ID="lbl_Hata"></asp:Label>
-        </asp:panel>
+        <div>
+        </div>
 
         <div class="form" style="min-height: 400px;">
             <div class="YarimForm" style="display: grid; margin-right: 50px; margin-top: 50px; float: right; min-height: 500px; width: 40%; text-align: center;">
 
+                <asp:Panel runat="server" ID="pnl_Hata" CssClass="hata" Visible="false">
+                    <asp:Label runat="server" ID="lbl_Hata"></asp:Label>
+                </asp:Panel>
+                <%--a--%>
                 <div>
                     <asp:TextBox ID="tb_baslik" runat="server" CssClass="textbox" Style="font-size: 13pt; text-align: center;" placeholder="Makale Başlığı"></asp:TextBox>
                 </div>

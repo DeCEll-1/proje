@@ -26,7 +26,7 @@ namespace YemekBlog.Admin
 
         protected void lbtn_submit_Click(object sender, EventArgs e)
         {
-            if (tb_Content.Text != null && tb_list != null && tb_baslik != null)
+            if (tb_Content.Text != "" || tb_list.Text != "" || tb_baslik.Text != "")
             {
                 Makaleler m = new Makaleler();
                 m.Baslik = tb_baslik.Text;
@@ -37,8 +37,9 @@ namespace YemekBlog.Admin
                 m.YuklemeTarihi = DateTime.Now;
                 Yoneticiler y = (Yoneticiler)Session["Admin"];
                 m.YoneticiID = y.ID;
+                m.Okundu = 0;
 
-                if (fu_min.HasFile)
+                    if (fu_min.HasFile)
                 {
                     FileInfo fi = new FileInfo(fu_max.FileName);
                     string fileName = "";
@@ -95,6 +96,11 @@ namespace YemekBlog.Admin
                     pnl_Hata.Visible = true;
                     lbl_Hata.Text = "Bir Hata Oluştu";
                 }
+            }
+            else
+            {
+                pnl_Hata.Visible = true;
+                lbl_Hata.Text = "Lütfen Bütün Kutuları Doldurun";
             }
 
 

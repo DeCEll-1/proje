@@ -414,12 +414,23 @@ namespace DataAccessLayer
             finally { dbConnection.Close(); }
         }
         //tamam
-        public bool MakaleEkle(Makaleler y)
+        public bool MakaleEkle(Makaleler m)
         {
             try
             {
-                dbConnection.Open();
-                dbConnection.Execute("INSERT INTO Makaleler(KategoriID,YoneticiID,Baslik,Ozet,Tamicerik,ThumbnailAdi,TamResimAdi,YuklemeTarihi,Okundu,IsDeleted) VALUES(@KategoriID,@YoneticiID,@Baslik,@Ozet,@TamIcerik,@ThumbnailAdi,@TamResimAdi,@YuklemeTarih,@Okundu, @IsDeleted)", new { y });
+                cmd.CommandText="INSERT INTO Makaleler(KategoriID,YoneticiID,Baslik,Ozet,Tamicerik,ThumbnailAdi,TamResimAdi,YuklemeTarihi,Okundu,IsDeleted) VALUES(@KategoriID,@YoneticiID,@Baslik,@Ozet,@Tamicerik,@ThumbnailAdi,@TamResimAdi,@YuklemeTarih,@Okundu, @IsDeleted)";
+                cmd.Parameters.AddWithValue("@KategoriID",m.KategoriID);
+                cmd.Parameters.AddWithValue("@YoneticiID",m.YoneticiID);
+                cmd.Parameters.AddWithValue("@Baslik",m.Baslik);
+                cmd.Parameters.AddWithValue("@Ozet",m.Ozet);
+                cmd.Parameters.AddWithValue("@Tamicerik",m.Tamicerik);
+                cmd.Parameters.AddWithValue("@ThumbnailAdi",m.ThumbnailAdi);
+                cmd.Parameters.AddWithValue("@TamResimAdi",m.TamResimAdi);
+                cmd.Parameters.AddWithValue("@YuklemeTarih",m.YuklemeTarihi);
+                cmd.Parameters.AddWithValue("@Okundu",m.Okundu);
+                cmd.Parameters.AddWithValue("@IsDeleted",m.IsDeleted);
+                con.Open();
+                cmd.ExecuteNonQuery();
                 return true;
             }
             catch (Exception)

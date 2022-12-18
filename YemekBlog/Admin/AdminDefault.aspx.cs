@@ -24,7 +24,7 @@ namespace YemekBlog.Admin
         {
             int ID = Convert.ToInt32(e.CommandArgument);
             Makaleler makaleler = dm.GetMakale(ID);
-            if (e.CommandName == "sil")
+            if (e.CommandName == "AktifEt")
             {
                 bool a = makaleler.IsDeleted;
                 if (a)
